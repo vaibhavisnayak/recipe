@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NutriBite</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/nav.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-sticky navbar-dark">
+        <a class="navbar-brand" href="#">NutriBite</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link " href="./landing.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./bmi.html">BMI</a></li>
+            </ul>
+
+            <!-- Right-aligned dropdown -->
+            <ul class="navbar-nav ml-auto">
+                    <button class="dark-mode-toggle-button" style="background-color: rgb(46, 46, 160); border:none;" onclick="toggleDarkMode()">
+                      <i class="fas fa-moon" style="padding:10px;color:white;"></i> <!-- Using Font Awesome moon icon -->
+                  </button>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+   
+
+    <div class="container mt-5">
+        <div class="row">
+            <aside class="col-md-3 mb-4">
+                <h3>About Us</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#who-we-are" class="text-white">Who We Are</a></li>
+                    <li class="list-group-item"><a href="#history" class="text-white">History</a></li>
+                    <li class="list-group-item"><a href="#meet-the-team" class="text-white">Meet the Team</a></li>
+                    <li class="list-group-item"><a href="#recipe-collection" class="text-white">Recipe Collection</a></li>
+                </ul>
+            </aside>
+
+            <main class="col-md-9">
+                <div class="about" id="who-we-are">
+                    <h2>Who We Are</h2>
+                    <p>At NutriBite, we are a dynamic startup committed to revolutionizing the way people approach nutrition 
+                        and healthy eating. Our team is comprised of passionate nutritionists, chefs, and wellness advocates 
+                        who share a common goal: to empower individuals to make informed dietary choices that enhance their 
+                        overall well-being.</p>
+                </div>
+
+                <div class="about" id="history">
+                    <h2>History</h2>
+                    <p>Founded in 2020, NutriBite was born out of a deep-seated desire to address the growing need for 
+                        accessible and credible nutrition information in a world filled with conflicting advice.</p>
+                </div>
+
+                <div class="about" id="meet-the-team">
+                    <h2>Meet the Team</h2>
+                    <div class="row text-center">
+                        <div class="col-md-4 team-member">
+                            <img src="./images/cheif.avif" alt="Samyukta">
+                            <h4>Samyukta</h4>
+                            <p>Doctor</p>
+                            <p>+91 9234323456</p>
+                        </div>
+                        <div class="col-md-4 team-member">
+                            <img src="./images/cheif_boy.avif" alt="Tanuja">
+                            <h4>Tanuja</h4>
+                            <p>Chef</p>
+                            <p>+91 9223416565</p>
+                        </div>
+                        <div class="col-md-4 team-member">
+                            <img src="./images/chief.avif" alt="Dhanush">
+                            <h4>Dhanush</h4>
+                            <p>Dietitian</p>
+                            <p>+91 6323416565</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about" id="recipe-collection">
+                    <h2>Recipe Collection</h2>
+                    <p>At NutriBite, we work closely with nutritionists, chefs, and culinary experts to curate a diverse 
+                        selection of recipes that are both delicious and nutritionally balanced.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+ 
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/dark_mode.js"></script>
+</body>
+</html>

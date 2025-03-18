@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Recipe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/detailpage.css">
+    <link rel="stylesheet" href="./css/nav.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-sticky navbar-dark">
+        <a class="navbar-brand" href="./landing.html">NutriBite</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="./landing.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./bmi.html">BMI</a></li>
+                <!-- Center Dropdown -->
+            </ul>
+    
+            <!-- Right-aligned dropdown -->
+            <ul class="navbar-nav ml-auto">
+              <button class="dark-mode-toggle-button" onclick="toggleDarkMode()">
+                <i class="fas fa-moon"></i> <!-- Using Font Awesome moon icon -->
+            </button>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Profile
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                      <a class="dropdown-item" href="./login.html" onclick="logout()">Log Out</a>
+                  </div>
+              </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img id="recipe-image" src="" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h1 class="recipe-title" id="rec-title"></h1>
+                <p class="recipe-meta">Servings: <span id="serve"></span> | Time: <span id="time"></span> minutes | Calories: <span id="calories"></span></p>
+                <p id="recipe-subtitle"></p>
+            </div>
+        </div>
+
+        <div id="ingredients" class="recipe-info my-4">
+            <h2>Ingredients</h2>
+            <ul class="list-group" id="ingre-list">
+                
+            </ul>
+        </div>
+
+        <div id="directions" class="recipe-info my-4">
+            <h2>Directions</h2>
+            <ol class="list-group" id="direc-list">
+                <!-- <li class="list-group-item ">Preheat your oven to 350°F (175°C).</li>
+                <li class="list-group-item">Mix all the ingredients in a bowl until smooth.</li>
+                <li class="list-group-item">Pour the mixture into a baking dish.</li>
+                <li class="list-group-item">Bake for 30 minutes or until golden brown.</li>
+                <li class="list-group-item">Let cool before serving.</li> -->
+            </ol>
+        </div>
+    </div>
+
+    <!-- <footer class="text-center py-4 bg-light">
+        <p>&copy; 2024 NutriBite. All rights reserved.</p>
+    </footer> -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/methods.js"></script>
+    <script src="./js/methodsItem.js"></script>
+
+</body>
+</html>

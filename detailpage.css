@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+.dark-mode-toggle-button:focus {
+    outline: none;
+    border: none;
+}
+
+.recipe-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.recipe-meta {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.recipe-info {
+    margin-top: 30px;
+}
+
+.recipe-info h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid  rgb(90, 117, 90);
+    padding-bottom: 10px;
+    color: rgb(90, 117, 90);
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+}

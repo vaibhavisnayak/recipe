@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/landing.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <title>Home</title>
+
+</head>
+
+<body onload="displayUsername()">
+
+
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-sticky navbar-dark">
+    <a class="navbar-brand" href="#">NutriBite</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="./landing.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="./bmi.html">BMI</a></li>
+            <!-- Center Dropdown -->
+        </ul>
+
+        <!-- Right-aligned dropdown -->
+        <ul class="navbar-nav ml-auto">
+          <button class="dark-mode-toggle-button" onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i> <!-- Using Font Awesome moon icon -->
+        </button>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profile
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item" href="./login.html" onclick="logout()">Log Out</a>
+              </div>
+          </li>
+      </ul>
+    </div>
+</nav>
+
+
+  <!-- Carousel Section -->
+  <div class="image-carousel">
+    <div class="carousel-images" id="carouselImages">
+      <img src="images/pexels-ella-olsson-572949-1640777.jpg" alt="Recipe Slider">
+      <img src="images/pexels-janetrangdoan-1099680.jpg" alt="Recipe Slider">
+      <img src="images/pexels-sydney-troxell-223521-718742.jpg" alt="Recipe Slider">
+      <img src="images/pexels-ella-olsson-572949-1640775.jpg" alt="Recipe Slider">
+      <img src="images/pexels-fotios-photos-1161682.jpg" alt="Recipe Slider">
+      <img src="images/pexels-foodie-factor-162291-566566.jpg" alt="Recipe Slider">
+    </div>
+  </div>
+  <h3 style=" padding: 50px; font-size: 30px;">Categories </h3>
+  <div class="categories-section">
+
+    <div class="category-card">
+      <i class='fas fa-bread-slice' style='font-size:20px; margin-right: 10px;color:rgb(160, 121, 47)' ;></i>Breakfast
+    </div>
+    <div class="category-card"><i class='fas fa-hamburger'
+        style='font-size:20px; margin-right: 10px;color:rgb(237, 222, 124)'></i>Lunch</div>
+    <div class="category-card"><i class='fas fa-bacon'
+        style='font-size:20px; margin-right: 10px;color:rgb(134, 26, 26)'></i>Dinner</div>
+    <div class="category-card"><i class='fas fa-ice-cream'
+        style='font-size:20px; margin-right: 10px;color:rgb(49, 110, 130)'></i>Dessert</div>
+    <div class="category-card"><i class='fas fa-leaf'
+        style='font-size:20px; margin-right: 10px;color:rgb(27, 107, 39)'></i>Vegan</div>
+  </div>
+  <!-- Recipe Section with Flip Cards -->
+  <h3 style="padding-top: 50px; font-size: 30px;"> Simple and Tasty Recipes</h3>
+  <h4 style="text-align: center;margin-bottom: 40px;"> Wholesome Recipes for Every Craving </h4>
+  <div class="recipe-section">
+    <div class="recipe-card-container">
+      <div class="recipe-card">
+        <div class="recipe-card-front">
+          <img src="./images/img1.png" class="img-fluid" alt="Recipe 1">
+        </div>
+        <div class="recipe-card-back">
+          <form action="./recipe_page.html" >
+            <input type="hidden" id="redPasta" value="redPasta">
+            <input type = "submit" value="Go to Recipe" onclick="showRsp()"  class="recipe-button">
+          </form>
+        </div>
+      </div>
+      <h4 style="text-align: center;">Red Sauce Pasta</h4>
+    </div>
+    <div class="recipe-card-container">
+      <div class="recipe-card">
+        <div class="recipe-card-front">
+          <img src="./images/brioche.png" class="img-fluid" alt="Recipe 2">
+        </div>
+        <div class="recipe-card-back">
+          <form action="./recipe_page.html">
+            <input type="hidden" id="briocheToast" value="briocheToast">
+            <input type="submit" value="Go to Recipe" onclick="showBt()"  class="recipe-button">
+          </form>
+        </div>
+      </div>
+      <h4 style="text-align: center;">Brioche Toast</h4>
+    </div>
+    <div class="recipe-card-container">
+      <div class="recipe-card">
+        <div class="recipe-card-front">
+          <img src="./images/pexels-brettjordan-2297961.jpg" class="img-fluid" alt="Recipe 3">
+        </div>
+        <div class="recipe-card-back">
+          <form action="./recipe_page.html">
+            <input type="hidden" id="eggsBenedict" value="eggsBenedict">
+            <input type="submit" value="Go to Recipe" onclick="showEb()"  class="recipe-button">
+          </form>
+        </div>
+      </div>
+      <h4 style="text-align: center;">Eggs Benedict</h4>
+    </div>
+    <div class="recipe-card-container">
+      <div class="recipe-card">
+        <div class="recipe-card-front">
+          <img src="./images/pexels-janetrangdoan-1099680.jpg" class="img-fluid" alt="Recipe 3">
+        </div>
+        <div class="recipe-card-back">
+          <form action="./recipe_page.html">
+            <input type="hidden" id="acaiBowl" value="acaiBowl">
+            <input type="submit" value="Go to Recipe" onclick="showAcb()" class="recipe-button">
+          </form>
+        </div>
+      </div>
+      <h4 style="text-align: center;">Acai Bowl</h4>
+    </div>
+    <div class="recipe-card-container">
+      <div class="recipe-card">
+        <div class="recipe-card-front">
+          <img src="./images/pexels-iina-luoto-460132-1211887.jpg" class="img-fluid" alt="Recipe 3">
+        </div>
+        <div class="recipe-card-back">
+          <form action="./recipe_page.html">
+            <input type="hidden" id="caesarSalad" value="caesarSalad">
+            <input type="submit" value="Go to Recipe" onclick="showCasd()" class="recipe-button">
+          </form>
+        </div>
+      </div>
+      <h4 style="text-align: center;">Caesar Salad</h4>
+    </div>
+    <div class="recipe-card-container">
+      <div class="recipe-card">
+        <div class="recipe-card-front">
+          <img src="./images/pexels-dana-tentis-118658-1213710.jpg" class="img-fluid" alt="Recipe 3">
+        </div>
+        <div class="recipe-card-back">
+          <form action="./recipe_page.html">
+            <input type="hidden" id="cobbSalad" value="cobbSalad">
+            <input type="submit" value="Go to Recipe" onclick="showCs()" class="recipe-button">
+        </form>
+        </div>
+      </div>
+      <h4 style="text-align: center;">Cobb Salad</h4>
+    </div>
+    <div class="recipe-card-container">
+      <div class="recipe-card">
+        <div class="recipe-card-front">
+          <img src="./images/pexels-pixabay-236813.jpg"  class="img-fluid" alt="Recipe 3">
+        </div>
+        <div class="recipe-card-back">
+          <form action="./recipe_page.html">
+            <input type="hidden" id="avocadoToast" value="avocadoToast">
+            <input type="submit" value="Go to Recipe" onclick="showAvt()"  class="recipe-button">
+          </form>
+        </div>
+      </div>
+      <h4 style="text-align: center;">Avocado Toast </h4>
+    </div>
+    <div class="recipe-card-container">
+      <div class="recipe-card">
+        <div class="recipe-card-front">
+          <img src="./images/pexels-sydney-troxell-223521-718742.jpg" class="img-fluid" alt="Recipe 3">
+        </div>
+        <div class="recipe-card-back">
+          <form action="./recipe_page.html" >
+            <input type="hidden" id="chickenParm" value="chickenParm">
+            <input type="submit" value="Go to Recipe" onclick="showCp()" class="recipe-button">
+          </form>
+        </div>
+      </div>
+      <h4 style="text-align: center;">Chicken Parm</h4>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <p>Deliciousness to your inbox. Subscribe for healthy recipes!</p>
+    <form class="d-flex justify-content-center">
+      <input type="email" id="email" placeholder="Enter your email">
+      <button type="submit" id="footerbtn">Join</button>
+    </form>
+  </div>
+
+  <!-- JavaScript for Dark Mode, Username, and Carousel -->
+  <script src="../registerwt/js/dark_mode.js"></script>
+  <script src="js/landing.js"></script>
+  <script src="./js/methods.js"></script>
+  <script src="./js/methodsItem.js"></script>
+
+  <script src="../registerwt/js/dark_mode.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

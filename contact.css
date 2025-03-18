@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: #FFFFFF; /* Light background for contrast */
+    color: #333333; /* Dark text for readability */
+}
+.back-button {
+    position: absolute;
+    width: 100px;
+    top: 0px;
+    left: 20px;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    background-color: #005B96;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #6a94b1;
+}
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.container h1 {
+    color: #005B96; /* Blue for high contrast */
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: #333333; /* Dark text */
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.contact-box {
+    background: #F5F5F5; /* Light grey background for better readability */
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.container-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.container-right {
+    flex-basis: 40%;
+    padding: 40px 60px;
+    background: #1E88E5; /* High contrast red for color-blind friendliness */
+    color: #FFFFFF; /* White text for contrast */
+    border-radius: 0px 20px 20px 0px;
+}
+
+.container-left h3 {
+    font-size: 25px;
+    color: #333333; /* Dark text */
+    margin-bottom: 20px;
+}
+
+.container-right h3 {
+    font-size: 25px;
+    color: #ffffff; /* White text */
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group {
+    flex-basis: 45%;
+}
+
+input, textarea {
+    width: 95%;
+    border: 2px solid #005B96; /* Blue borders for better distinction */
+    color: #333333; /* Dark text */
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    outline: none;
+    background-color: #FAFAFA; /* Light background for inputs */
+} 
+
+textarea {
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    color: #333333; /* Dark text */
+}
+
+button {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background: #005B96 ; /* Green for action buttons (color blind-friendly) */
+    border: none;
+    outline: none;
+    color: #FFFFFF; /* White text for readability */
+    width: 25%;
+    height: 40px;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background: #6a94b1 ; /* Slightly lighter green on hover */
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+tr td:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+@media only screen and (min-width: 1367px) {
+    .container {
+        width: 70%;
+    }
+
+    .container h1 {
+        font-size: 50px;
+    }
+
+    .container p {
+        font-size: 25px;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 40px;
+    }
+
+    .input-row .input-group {
+        flex-basis: 48%;
+    }
+
+    button {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .container {
+        width: 70%;
+    }
+
+    .container h1 {
+        font-size: 45px;
+    }
+
+    .container p {
+        font-size: 22px;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 40px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .input-row .input-group {
+        flex-basis: 48%;
+    }
+
+    button {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .contact-box {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .container h1 {
+        font-size: 40px;
+    }
+
+    .container p {
+        font-size: 22px;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 30px;
+    }
+
+    .input-row {
+        flex-wrap: wrap;
+    }
+
+    .input-row .input-group {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    .container h1 {
+        font-size: 40px;
+    }
+
+    .container p {
+        font-size: 18px;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 20px;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .input-row .input-group {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    input,
+    textarea {
+        padding: 8px;
+    }
+
+    button {
+        width: 60%;
+    }
+
+    tr td:first-child {
+        font-size: 15px;
+        font-weight: 600;
+        padding-right: 10px;
+    }
+}
+
+ /* Add a background overlay */
+ #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999;
+    display: none; /* Initially hidden */
+}
+
+/* Center the popup container */
+#progress-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background-color: white; /* White background for the popup */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
+    position: relative;
+}
+
+/* Centering content inside the popup */
+.tick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center both elements inside the container */
+}
+
+.progress-circle {
+    position: absolute;
+    top: 22%;
+    left: 24%;
+    transform: translate(-50%, -50%); /* Center both elements inside the container */
+}
+
+/* Circular progress */
+.progress-circle {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    opacity: 1;
+    transition: opacity 0.5s;
+    z-index: 1; /* Ensure it's on top initially */
+}
+
+/* Tick mark hidden initially */
+.tick {
+    font-size: 50px;
+    color: #28a745; /* Green */
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 2; /* Ensure it's above the spinner when shown */
+}
+
+/* Animation for the spinning circle */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide the spinner and show the tick */
+.show-tick .progress-circle {
+    opacity: 0;
+}
+
+.show-tick .tick {
+    opacity: 1;
+}

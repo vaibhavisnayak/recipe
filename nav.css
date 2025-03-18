@@ -1,0 +1,135 @@
+ /* Navbar Styling */
+ .navbar {
+    background-color: #283593; /* Dark blue for navbar background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff; /* White text for branding */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #FFC107; /* Gold hover for branding */
+}
+
+/* Nav Item Styling */
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Space between navigation items */
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #ffffff;
+    padding: 12px 20px;
+    transition: all 0.3s ease; /* Smooth hover and focus transition */
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #FFC107; /* Gold color on hover/focus */
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFC107; /* Gold underline */
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link:focus::before {
+    width: 100%; /* Underline expands fully on hover */
+}
+
+.navbar-toggler {
+    border-color: #ffffff; /* White border for toggle button */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Active link styling */
+.navbar-nav .nav-link.active {
+    color: #FFC107; /* Gold color for active state */
+    font-weight: bold;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    background-color: #1A237E; /* Darker blue for dropdown */
+    border-radius: 0;
+}
+
+.dropdown-item {
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #FFC107; /* Gold hover effect on dropdown items */
+}
+
+/* Interactive Changes */
+.navbar-toggler:hover {
+    background-color: #3949AB; /* Slight background change on hover */
+}
+
+/* Color Blind Friendly Adjustments */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background-color: #1A237E; /* Dark mode adjustments */
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link {
+        color: #B3E5FC; /* Light blue text for better contrast */
+    }
+}
+
+/* Navbar Sticky on Scroll */
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: #283593;
+}
+
+/* Mobile Styles */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+/* Animation for smooth dropdown opening */
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, display 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus .dropdown-menu {
+    display: block;
+    opacity: 1;
+}

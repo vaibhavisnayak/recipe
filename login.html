@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Day</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/logn.css">
+</head>
+<body>
+    <script src="./js/mini_proj.js"></script> 
+
+    <div id="theme">
+        <button class="dark-mode-toggle-button" onclick="dark()">
+            <i class="fas fa-moon"></i> <!-- Using Font Awesome moon icon -->
+        </button>
+    </div>
+
+    <div id="bod">
+        <div class="wrapper" id="box">
+            <div id="welcome">
+                <h2>Nourish your body and soul</h2>
+                <button type="button" onclick="showRegister()">Register</button>
+                <button type="button" onclick="showLogin()">Login</button>
+            </div>
+
+            <form action="#" id="form1" style="display:none;">
+                <h2>Register</h2>
+                <div class="input-field">
+                    <input type="text" required onblur="validateField(this)">
+                    <label>Enter your Full Name</label>
+                    <div class="error-message"></div>
+                </div>
+                <div class="input-field">
+                    <input type="email" required onblur="validateField(this)">
+                    <label>Email Id</label>
+                    <div class="error-message"></div>
+                </div>
+                <div class="input-field">
+                    <input type="number" required onblur="validateField(this)">
+                    <label>Enter your Phone Number</label>
+                    <div class="error-message"></div>
+                </div>
+                <div class="input-field">
+                    <input type="password" required onblur="validateField(this)">
+                    <label>Create Password</label>
+                    <div class="error-message"></div>
+                    
+                </div>
+                <div class="input-field">
+                    <input type="password" required onblur="validateField(this)">
+                    <label>Confirm Password</label>
+                    <div class="error-message"></div>
+                    
+                </div>
+                <button type="button" onclick="register()">Submit</button>  
+            </form>
+
+            <form action="#" id="forlogin" style="display:none;">
+                <h2>Login</h2>
+                <div class="input-field">
+                    <input type="email" required onblur="validateField(this)">
+                    <label>Email Id</label>
+                    <div class="error-message"></div>
+                </div>
+                <div class="input-field">
+                    <input type="password" required onblur="validateField(this)">
+                    <label>Enter the Password</label>
+                    <div class="error-message"></div>
+                </div>
+                <div class="forgotpass">
+                    <a href="./forgot_password.html">Forgot Password?</a>
+                </div>
+                <button type="button" onclick="login()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="about-text">
+        <h1 class="change">A Balanced Diet: Fuel for a Strong Body and Clear Mind</h1>
+        <p id="change">A balanced diet is essential for maintaining a healthy life as it provides the body with the necessary nutrients, energy, and building blocks to function optimally. Proper nutrition supports the body's immune system, aids in growth and development, and helps maintain a healthy weight. A diet rich in fruits, vegetables, whole grains, lean proteins, and healthy fats ensures that essential vitamins, minerals, and antioxidants are available to prevent chronic diseases such as diabetes, heart disease, and obesity. Furthermore, good dietary habits contribute to mental health, improve mood, and boost overall well-being, fostering both physical and emotional resilience. In short, a well-planned diet is crucial for the vitality and longevity of an individual's life, supporting everything from physical strength to mental clarity.</p>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

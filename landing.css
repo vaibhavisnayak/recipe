@@ -1,0 +1,256 @@
+body {
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", Garamond, serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h3 {
+  text-align: center;
+  color: #005B96;
+}
+
+
+/* Carousel */
+.image-carousel {
+  width: 100%;
+  height: 50vh; /* Use vh for scalable height */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  height: 100%;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Categories Section */
+.categories-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px;
+  flex-wrap: wrap; /* Add wrap for responsiveness */
+}
+
+.category-card {
+  background-color: #1e9cf0;
+  color: black;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  font-weight: bold;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Flip Card Styles */
+.recipe-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.recipe-card-container {
+  width: 100%;
+  max-width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.recipe-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.recipe-card-container:hover .recipe-card {
+  transform: rotateY(180deg);
+}
+
+.recipe-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-card-front, .recipe-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.recipe-card-back {
+  background-color: #96c9eb;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-button {
+  background-color: #ffffff;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: inline-block;
+}
+
+.recipe-button:hover {
+  background-color: lightblue;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 5%;
+  padding: 50px;
+  text-align: center;
+  background-color: #3d3d3d;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#footerbtn {
+  background-color: #a12727;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 20px;
+  color: white;
+}
+
+#footerbtn:hover {
+  background-color: #501010;
+}
+
+#email {
+  width: 80%; /* Adjust width for mobile responsiveness */
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #eeeeee;
+}
+
+.dark-mode .image-carousel img {
+  filter: brightness(0.8);
+}
+
+.dark-mode .recipe-button {
+  background-color: #f2f2f2;
+  color: #4a7c59;
+}
+
+.dark-mode .navbar {
+  background-color: #222;
+}
+
+/* Dark Mode Button */
+.dark-mode-toggle-button {
+  top: 57px;
+  right: 10%;
+  padding: 10px;
+  border: 0px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(46, 46, 160);
+}
+
+.dark-mode-toggle-button:focus {
+  outline: none;
+  border: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .image-carousel {
+    height: 40vh; /* Reduce carousel height for smaller screens */
+  }
+
+  .carousel-images img {
+    height: 40vh;
+  }
+
+  .categories-section {
+    gap: 20px; /* Reduce gap on smaller screens */
+  }
+
+  .recipe-card-container {
+    max-width: 100%; /* Full width for small screens */
+  }
+
+  .site-footer {
+    padding: 30px;
+    font-size: 14px;
+  }
+
+  .dark-mode-toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 1.5em; /* Smaller text on very small screens */
+  }
+
+  .nav-links {
+    font-size: 0.9em;
+    gap: 10px;
+  }
+
+  #email {
+    width: 90%; /* Full width for smaller screens */
+  }
+
+  .recipe-button {
+    font-size: 0.8em; /* Adjust button font size */
+  }
+
+  .image-carousel {
+    height: 30vh;
+  }
+
+  .carousel-images img {
+    height: 30vh;
+  }
+}
